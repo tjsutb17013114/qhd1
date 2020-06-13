@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //alert("ok");
+       // window.confirm("confirm?");
+    </script>
+</head>
+<body>
+    <form >
+        <br />英文单词science的意思是：
+        <input type="radio" name="chooseword" id="answerA" value="科学">科学
+        <input type="radio" name="chooseword" id="answerB" value="教育">教育
+        <input type="radio" name="chooseword" id="answerC" value="社会">社会
+        <br /><br />您的学历为：
+        <input type="radio" name="record" id="answer1" value="小学">小学
+        <input type="radio" name="record" id="answer2" value="初中">初中
+        <input type="radio" name="record" id="answer3" value="高中">高中
+        <input type="radio" name="record" id="answer4" value="大专">大专
+        <input type="radio" name="record" id="answer5" value="本科">本科
+        <input type="radio" name="record" id="answer6" value="其他">其他
+    </form>
+    <div id="showresult" style="line-height: 25px; margin-top: 20px"></div>
+    <script>
+        window.onload = function(){
+            var result = document.getElementById("showresult");
+            result.innerHTML = "";
+            var choosewordlist = document.getElementsByName("chooseword");
+            for(var i=0;i<choosewordlist.length;i++){
+                result.innerHTML += choosewordlist[i].value +"\t";
+            }
+
+        }
+    </script>
+</body>
+</html>
